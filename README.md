@@ -1,1 +1,1 @@
-![My Project](gave.jpg)
+![My Project](gave.JPG)
