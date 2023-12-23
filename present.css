@@ -1,0 +1,110 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #14800a;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.greeting {
+    position: fixed;
+    font-family: 'Great Vibes', cursive;
+    top: 50px;
+    left: 45%;
+    transform: translateX(-50%, -50%);
+    color: white;
+    z-index: 999;
+}
+
+.greeting span {
+    display:block;
+    font-size: 60px;
+}
+
+.giftcontainer {
+    position: relative;
+}
+.giftcontainer::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    top: 90px;
+    left: -10px;
+}
+.gift{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #dfd9d9;
+}
+.gift::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: #ee2e2e;
+    left: 62px;
+}
+.gift::after{
+    content:'';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0,0,0,0.3);
+    width: 150px;
+    height: 100px;
+}
+
+#click{
+    display: none;
+}
+.click{
+    position: absolute;
+    background-color: #dfd9d9;
+    width: 170px;
+    height: 40px;
+    top: -40px;
+    left: -10px;
+    transform-origin: bottom left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.click::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background-color: #ee2e2e;
+    left: 72px;
+}
+.click::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 0;
+    border-bottom: 30px solid #ee2e2e;
+    border-top: 30px solid #ee2e2e;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left: 65px;
+    top: -47px;
+}
+#click:checked+.click{
+    transform: rotate(-110deg) scale(0.85);
+}
+#click:checked~.wishes{
+    transform: translateY(-120px);
+}
+
+.wishes{
+    position: absolute;
+    left: 25%;
+    top: -54%;
+    width: 50%;
+    z-index: -1;
+    transition: .5s;
+}
