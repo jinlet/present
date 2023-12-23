@@ -12,7 +12,7 @@ body {
     position: fixed;
     font-family: 'Great Vibes', cursive;
     top: 50px;
-    left: 45%;
+    left: 30%;
     transform: translateX(-50%, -50%);
     color: white;
     z-index: 999;
@@ -34,13 +34,14 @@ body {
     background-color: rgba(0,0,0,0.4);
     border-radius: 50%;
     top: 90px;
-    left: -10px;
+    left: -80px;
 }
 .gift{
     position: absolute;
     width: 150px;
     height: 100px;
     background-color: #dfd9d9;
+    left: -68px;
 }
 .gift::before{
     content: '';
@@ -107,4 +108,15 @@ body {
     width: 50%;
     z-index: -1;
     transition: .5s;
+}
+
+/* Media query for smaller screens (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    .greeting {
+        left: 25%;
+    }
+
+    .greeting span{
+        font-size: 40px; /* Adjust the font size for smaller screens */
+    }
 }
