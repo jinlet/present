@@ -28,10 +28,12 @@
                 transform: translateY(100vh);
             }
         }
+
+        
     </style>
 </head>
 <body>
-    <audio autoplay loop>
+    <audio id="christmasMusic" loop>
         <source src="christmas_music.mp3" type="audio/mp3">
         Your browser does not support the audio tag.
     </audio>
@@ -48,6 +50,22 @@
             </div>
         </div>
     </div>
+
+    <div class="audio-controls">
+        <button onclick="toggleAudio()">Trykk her</button>
+    </div>
+
+    <script src="snowfall.js"></script>
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("christmasMusic");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
 
     <script src="snowfall.js"></script>
 </body>
